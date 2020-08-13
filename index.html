@@ -3,16 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Houses</title>
+    <title>Harry Potter Houses </title>
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+    
     <div class="main">
         <h2>Houses</h2>
-        <a href="Gryffindor.html">Gryffindor</a>
-        <a href="Slytherin.html">Slytherin</a>
-        <a href="Ravenclaw.html">Ravenclaw</a>
-        <a href="Hufflepuff.html">Hufflepuff</a>
+        
+        <a  href="gryffindor.html">Gryffindor</a>
+        <a href="slytherin.html">Slytherin</a>
+        <a href="ravenclaw.html">Ravenclaw</a>
+        <a href="hufflepuff.html">Hufflepuff</a>
     </div>
+    <script type="text/javascript">
+    const buttons = document.querySelectorAll('a');
+    buttons.forEach(btn =>{
+    btn.addEventListener('click', function(e){
+        let x = e.clientX - e.target.offsetLeft;
+        let y = e.clientY - e.target.offsetLeft;
+
+        let ripples = document.createElement('span');
+        ripples.style.left = x + 'px';
+        ripples.style.top = y + 'px';
+        this.appendChild(ripples);
+
+        setTimeout(() => {
+            ripples.remove()
+        },1000);
+    })
+})</script>
 </body>
 </html>
