@@ -1,88 +1,48 @@
 *{
-    margin:0;
-    padding:0;
-
+    margin: 0;
+    padding: 0;
 }
 body{
     background-color: black;
 }
 .main{
-    width:100%;
-    height:100vh;
-    display:flex;
+    width: 100%;
+    height: 100vh;
+    display: flex;
     justify-content: center;
-    align-items:center;
-    flex-direction:column;
+    align-items: center;
+    flex-direction: column;
 }
 .main h2{
     font-size: 10rem;
-    color: rgba(80, 75, 75, 0.748);
     z-index: -1;
+    color: rgba(66, 66, 66, 0.748);
 }
 .main a{
-    position: relative;
-    width:150px;
-    height:40px;
-    text-align:center;
+    width: 150px;
+    height: 40px;
+    text-align: center;
     line-height: 40px;
-    color:white;
-    text-decoration:none;
-    margin:10px 10px;
-    border-radius:6px;
-    border:0;
-    text-transform: uppercase;
-    overflow:hidden;
-    letter-spacing: 2px;
-    font-weight: bold;
-    
+    color: white;
+    text-decoration: none;
+    margin: 10px 0px;
+}
+.main a:nth-child(2){
+    background: linear-gradient(45deg,#ff3f3f,#e9bcbc);
+}
+.main a:nth-child(3){
+    background: linear-gradient(45deg,#1748db,#b9bbe9);
+}
+.main a:nth-child(4){
+   background: linear-gradient(45deg,#e816d6,#dfa4df);
+}
+.main a:nth-child(5){
+    background: linear-gradient(45deg,#52ec1f,#b3eeba);
 }
 
 
-a:nth-child(2){
-    background: linear-gradient(45deg,#ff0404,#f09090);
+@media (max-width: 500px){
+    .main h2{
+        font-size: 4rem;
+    }
 }
-a:nth-child(3){
-    background: linear-gradient(45deg,#0141ff,#9497f7);
-}
-a:nth-child(4){
-    background: linear-gradient(45deg,#ff03ea,#e791e7);
- }
-a:nth-child(5){
-     background: linear-gradient(90deg,#41ff01,#7dd187);
- }
-
- @media(max-width:500px){
-     .main h2{
-         font-size:4 rem;
-     }
- }
-
- a:hover{
-    cursor: pointer;
-   
-    box-shadow: 0 2px 2px 2px darkgray;
-    
-    z-index: 1;
- } 
- 
- span{
-     position: absolute;
-     background: #fff;
-     transform:translate(-50%,-50%);
-     pointer-events:none;
-     border-radius: 50%;
-     animation: animate 0.4s linear infinite;
- }
-
- @keyframes animate{
-     0%{
-         width:0px;
-         height:0px;
-         opacity: 0.5;
-     }
-     100%{
-         width:500px;
-         height:500px;
-         opacity:0;
-     }
- }
